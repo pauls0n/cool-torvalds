@@ -1,10 +1,13 @@
 :root {
   --bg: #ffecaa;
+  --secondary-color: #ffd748;
   --text-color: #000000;
   --font-family: "Ubuntu Mono", monospace;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -20,19 +23,6 @@ body {
   font-weight: 400;
   line-height: 35px;
   overflow-x: hidden;
-}
-
-body::before {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    background-image: url("images/curve-bg.png");
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    z-index: -1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
 }
 
 a {
@@ -55,6 +45,7 @@ a {
   align-items: center;
   gap: 3rem;
   padding: 8rem 0;
+  background: linear-gradient(10deg, var(--bg) 50%, var(--secondary-color) 50%);
 }
 
 #title {
@@ -131,6 +122,7 @@ footer {
   align-items: center;
   padding: 2rem;
   gap: 1rem;
+  background-color: var(--secondary-color)
 }
 
 footer p {
